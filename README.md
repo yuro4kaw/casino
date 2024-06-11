@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Онлайн Казино
 
-## Getting Started
+Цей проект це сторінка для онлайн казино з функціоналом пошуку ігор. Сторінка містить секцію з популярними іграми, пошукове поле для фільтрації ігор в реальному часі, адаптивну верстку та використовує сучасні веб-технології.
 
-First, run the development server:
+## Як запустити проект локально
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Клонувати репозиторій:**
+   ```
+   git clone https://github.com/username/online-casino.git
+   cd online-casino```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Встановити залежності:**
+```npm install```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Запустити проект:**
+```npm run dev```
 
-## Learn More
+4. **Відкрити проект у браузері:**
+Перейдіть за адресою http://localhost:3000 у вашому браузері.
 
-To learn more about Next.js, take a look at the following resources:
+Для розробки проекту були використані наступні бібліотеки:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **React** - бібліотека для побудови користувацьких інтерфейсів.
+- **Next.js** - фреймворк для React, що забезпечує рендеринг на стороні сервера та генерацію статичних сайтів.
+- **SCSS** - препроцесор CSS, який дозволяє використовувати змінні, вкладені правила та інші розширені можливості.
+- **Redux** - бібліотека для управління станом додатку. 
+- **Axios** - бібліотека для здійснення HTTP запитів (для отримання даних з JSON файлу).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Функціонал проекту
 
-## Deploy on Vercel
+1. **Заголовок сторінки з назвою казино:**
+На сторінці відображається заголовок з назвою казино.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Секція з популярними іграми:**
+- Кожна гра має зображення, назву та короткий опис.
+- Дані про ігри завантажуються з JSON файлу із серверу за допомогою AXIOS.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. **Пошук ігор:**
+- Пошукове поле дозволяє користувачам фільтрувати список ігор в реальному часі.
+
+4. **Адаптивна верстка:**
+- Сторінка адаптована для різних розмірів екранів, включаючи мобільні пристрої.
+
+## Структура проекту
+
+- `components/` - компоненти React.
+- `styles/` - файли стилів SCSS.
+- `store/` - файли управління станом (Redux).
+- `hooks/` - Корисні утиліти з винесеною логікою (Наприклад запит за іграми).

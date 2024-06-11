@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .search-input {
@@ -34,7 +35,20 @@ body {
 
 .popular-games {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+
+  @include for-size(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include for-size(laptop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include for-size(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   gap: 34px 20px;
 }
 
